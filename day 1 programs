@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class StringToIntegerConversion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+      
+        System.out.print("Enter the string representation of the number: ");
+        String str = scanner.nextLine();
+        
+        try {
+            int number = Integer.parseInt(str);
+            System.out.println("Output Integer: " + number);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input! Please enter a valid integer string.");
+        }
+        
+        scanner.close();
+    }
+}
