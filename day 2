@@ -1,0 +1,30 @@
+1 .counting vowels
+  public class VowelCounter {
+    public static int countVowels(String str) {
+        int count = 0;
+        for (char c : str.toLowerCase().toCharArray()) {
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        String str = "Hello World";
+        int vowelCount = countVowels(str);
+        System.out.println("Number of vowels in '" + str + "': " + vowelCount);
+    }
+}
+2.string to integer
+  public class StringToInt {
+    public static void main(String[] args) {
+        String str = "123";
+        try {
+            int num = Integer.parseInt(str);
+            System.out.println("The integer value is: " + num);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: unable to convert string to integer");
+        }
+    }
+}
