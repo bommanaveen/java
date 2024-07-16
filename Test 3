@@ -20,6 +20,8 @@ obj.eat();
 obj.walk();
 }
 }
+
+
 2.
 interface Adder {
     int add(int a, int b);
@@ -53,6 +55,7 @@ public class Main {
     }
 }
 3.
+
 
 
 
