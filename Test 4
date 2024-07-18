@@ -19,6 +19,8 @@ public class DivisionByZeroExample {
         } finally {
             System.out.println("Finally block is always executed.");
         }
+}
+}
 2.
 public class ThrowExceptionExample {
     static void checkAge(int age) {
