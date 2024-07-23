@@ -1,4 +1,25 @@
-1	Write a program to print n prime numbers after nth Prime number
+1.	Write a Java Program to Convert a Given Number of Days in Terms of Years, Weeks & Days. 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of days:");
+        int totalDays = scanner.nextInt();
+
+        int years = totalDays / 365;
+        int remainingDays = totalDays % 365;
+
+        int weeks = remainingDays / 7;
+        remainingDays = remainingDays % 7;
+
+        System.out.println("No. of years: " + years);
+        System.out.println("No. of weeks: " + weeks);
+        System.out.println("No. of days: " + remainingDays);
+    }
+}	
+2.
+Write a program to print n prime numbers after nth Prime number
 
 import java.util.Scanner;
 
@@ -49,7 +70,8 @@ public class Main {
         return true;
     }
 }
-2.	Write a program to print number of factors and to print nth factor of the given numb
+3.
+Write a program to print number of factors and to print nth factor of the given numb
 
 import java.util.Scanner;
 
@@ -88,3 +110,57 @@ public class Main {
         }
     }
 }
+4.
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "143";
+        permute(str, 0, str.length() - 1);
+    }
+
+    private static void permute(String str, int l, int r) {
+        if (l == r)
+            System.out.println(str);
+        else {
+            for (int i = l; i <= r; i++) {
+                str = swap(str, l, i);
+                permute(str, l + 1, r);
+                str = swap(str, l, i);
+            }
+        }
+    }
+
+    public static String swap(String a, int i, int j) {
+        char temp;
+        char[] charArray = a.toCharArray();
+        temp = charArray[i];
+        charArray[i] = charArray[j];
+        charArray[j] = temp;
+        return String.valueOf(charArray);
+    }
+}
+5. Write a Program to create an array with the First Element as the Number and Second Element as the Square of the Number.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of elements:");
+        int n = scanner.nextInt();
+        int[][] array = new int[n][2];
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter number " + (i + 1) + ":");
+            int num = scanner.nextInt();
+            array[i][0] = num;
+            array[i][1] = num * num;
+        }
+
+        System.out.println("The array is:");
+        for (int i = 0; i < n; i++) {
+            System.out.println("[" + array[i][0] + ", " + array[i][1] + "]");
+        }
+    }
+}
+
