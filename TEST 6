@@ -1,0 +1,31 @@
+1.
+Java program to create a Base class with a method called ‘void 
+area(int a, int b)’ which print area of a square. Now override the 
+method from Derived class and make it print area of a rectangle.
+
+class Base {
+
+    void area(int a, int b) {
+        int area = a * a; 
+        System.out.println("Area of square: " + area);
+    }
+}
+
+class Derived extends Base {
+    void area(int a, int b) {
+        int area = a * b;
+        System.out.println("Area of rectangle: " + area);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Base base = new Base();
+        base.area(5, 5); 
+
+        Derived derived = new Derived();
+        derived.area(5, 10);
+    }
+}
+2
