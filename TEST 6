@@ -29,3 +29,41 @@ public class Main {
     }
 }
 2
+Write java code to overload a method called ‘int sum(int a, int b)’
+by the 3 ways.
+class Calculator {
+
+    int sum(int a, int b) {
+        return a + b;
+    }
+
+    int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    double sum(double a, double b) {
+        return a + b;
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        int result1 = calc.sum(10, 20);
+        System.out.println("Sum of 10 and 20: " + result1);
+
+
+        int result2 = calc.sum(10, 20, 30);
+        System.out.println("Sum of 10, 20, and 30: " + result2);
+
+        double result3 = calc.sum(10.5, 20.5);
+        System.out.println("Sum of 10.5 and 20.5: " + result3);
+    }
+}
+OUT PJUT:
+Sum of 10 and 20: 30
+Sum of 10, 20, and 30: 60
+Sum of 10.5 and 20.5: 31.0
+
